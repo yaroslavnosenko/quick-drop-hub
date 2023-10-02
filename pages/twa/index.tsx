@@ -1,10 +1,10 @@
-import { useTelegram } from '@/hooks'
+import { BalanceView, TransactionList } from '@/components'
 
 export default function Home() {
-  const { WebApp } = useTelegram()
   return (
-    <main className="bg-tg-bg min-h-screen text-tg-text">
-      {WebApp?.themeParams.bg_color}
+    <main className="bg-tg-bg text-tg-text px-6">
+      <BalanceView />
+      <TransactionList />
     </main>
   )
 }
